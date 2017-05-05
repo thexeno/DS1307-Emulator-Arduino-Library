@@ -44,6 +44,6 @@ Function to used in sequence to *read from the emulator* using the sketch:
   3. **(*char*) DS1307Emulator.readUserData()** -> read a char from the current address set in the previous point - it will auto-increment the internal address from the one set in step 2. Repeat for as many bytes shall be read.
   4. There is no need to close a reading sequence.
 
-In other words, the sketch shall follow the same algoritm the bus master would do. See the [DS1307 Datasheet](https://www.maximintegrated.com/en/products/digital/real-time-clocks/DS1307.html) for more informations.
+In other words, the sketch shall follow the same algoritm the bus master would do. For the moment, read the [DS1307 Datasheet](https://datasheets.maximintegrated.com/en/ds/DS1307.pdf) for informations like what data is present at what address, what to write at what address to stop and start the clock and so on.
 
   

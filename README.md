@@ -6,13 +6,15 @@ The DS1307 Emulator is, as stated by its name, a mere emulation of the omonym ch
 ## Compatibility
 Since it is really keeping the time, this library is pre-tuned (and since it is open source can be retuned) to work with a quartz crystal of the system clock, running at 16MHz. For this reason can run on any Arduino that uses an external crystal at 16 MHz. The microcontroller supported is the one from the Atmega family (like Arduino Uno, Leonardo, Nano, Micro, Mini and other Atmega derived at 16MHz crystal, like Arduino PRO).
 
+It requires to have installed the [HardWire](http://www.arduinolibraries.info/libraries/hard-wire) library.
+
 ## How to use it
 To use the library it is needed at least to call the initialization. It could run with just a single line of code.
 
 ### Initialization
 
   - **DS1307Emulator.init(*pin number*)** -> initialize the whole emulator, wiping all the non-volatile data and the timekeeping registers. Initialize also the I2C bus. *This step is the minimum required to get the library up and running, therefore is the only function really needed.*
-  - **DS1307Emulator.busDisconnect()** -> detach the RTC from the I2C bus without alterating the current RTC functionality. Useful if the the bus shall be used/shared with other tasks on the same sketch. After this call, the emulator will work only inside the sketch.
+  - **DS1307Emulator.busDisconnect()** -> detach the RTC from the I2C bus without alterating the current RTC functionality. Useful if the the bus shall be used/shared with other tasks on the same sketch. After this call, the emulator will work only inside the sketch and you can do whateve you want with the I2C bus, which will be compatible with the [Wire](https://www.arduino.cc/en/Reference/Wire) lib.
   - **DS1307Emulator.busConnect()** -> attach the RTC to the I2C bus without alterating the RTC functionality.
   
 Why the *pin number*? The DS1307 has an output pin, called pin number in the APIs. Let's say we have an Arduino Uno and we want to use the default LED in the port 13. The sketcher shall import the library and call the init in the *setup()*, with the pin number 13. Then, if the emulator is connected to the I2C bus, any master can interact with the Arduino. The only thing required is to call the *init(pin number)* first.

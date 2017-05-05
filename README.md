@@ -1,4 +1,4 @@
-# DS1307 Emulator Arduino Library V1.0.0
+# DS1307 Emulator Arduino Library V1.0
 *Licensing information is attached on the header of each file.*
 
 The DS1307 Emulator is, as stated by its name, a mere emulation of the omonym chip. This library lets your Arduino behave like such a chip, without actually having a DS1307 lying around. 
@@ -38,8 +38,8 @@ Function to used in sequence to *write to the emulator* using the sketch:
 Function to used in sequence to *read from the emulator* using the sketch:
 
   1. **DS1307Emulator.bufferUserData()** -> save the current time to a temporary     buffer to avoid time wrapping issues (as the DS1307 chip does).
-  2. **DS1307Emulator.writeToRTC(address)** -> write the current address byte. *Note that the step 2 is not mandatory, provided that the address currently set is the right one.*
-  3. **(char) DS1307Emulator.readUserData()** -> read a char from the current address set in the previous point - it will auto-increment the internal address from the one set in step 2. Repeat for as many bytes shall be read.
+  2. **DS1307Emulator.writeToRTC(*address*)** -> write the current address byte. *Note that the step 2 is not mandatory, provided that the address currently set is the right one.*
+  3. **(*char*) DS1307Emulator.readUserData()** -> read a char from the current address set in the previous point - it will auto-increment the internal address from the one set in step 2. Repeat for as many bytes shall be read.
   4. There is no need to close a reading sequence.
 
 In other words, the sketch shall follow the same algoritm the bus master would do. See the [DS1307 Datasheet](https://www.maximintegrated.com/en/products/digital/real-time-clocks/DS1307.html) for more informations.

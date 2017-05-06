@@ -1,0 +1,36 @@
+#######################################
+# Syntax Coloring Map For Wire
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+init	KEYWORD2
+softInit	KEYWORD2
+tickIncrementISR	KEYWORD2
+readUserData	KEYWORD2
+writeToRTC	KEYWORD2
+bufferUserData	KEYWORD2
+setUserData	KEYWORD2
+busConnect KEYWORD2
+busDisconnect KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+DS1307Emulator	KEYWORD2
+HardWire	KEYWORD2
+Wire	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+DS1307_DEVICE_ADDRESS LITERAL1

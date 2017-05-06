@@ -1,5 +1,6 @@
-/*
- * DS1307 Emulator functionality test. Here is initialized and started the RTC emulation. 
+/* DS1307 RTC Emulator functionality test, with serial commands and interaction. 
+ *
+ * Here is initialized and started the RTC emulation. 
  * With a serial terminal, is possible to send the following commands, followed by a "\n" character (usually already enabled on the Arduino terminal):
  *          "h" to increment the hours
  *          "m" to increment minutes

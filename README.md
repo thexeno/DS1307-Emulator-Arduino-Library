@@ -8,6 +8,15 @@ Since it is really keeping the time, this library is pre-tuned (and since it is 
 
 It requires to have installed the [HardWire](http://www.arduinolibraries.info/libraries/hard-wire) library.
 
+### Resources
+When initialized with the I2C bus usage, this library occupy the:
+ - Timer1
+ - I2C bus/pins
+ - RTC pin
+ - Any possible resource used by the Wire library, since it is used to communicate through the I2C bus
+ 
+Disconnecting the RTC logic from the bus, allow to free up the I2C resoources, like SDA and SCL pins, or use the I2C bus for other purposes or role in the bus (i.e. like using the Arduino running the emulator as I2C master for other purposes). It can subsequently reconnected to the RTC logic (see *Initialization* below).
+
 ## How to use it
 To use the library it is needed at least to call the initialization. It could run with just a single line of code.
 
@@ -45,5 +54,7 @@ Function to used in sequence to *read from the emulator* using the sketch:
   4. There is no need to close a reading sequence.
 
 In other words, the sketch shall follow the same algoritm the bus master would do. For the moment, read the [DS1307 Datasheet](https://datasheets.maximintegrated.com/en/ds/DS1307.pdf) for informations like what data is present at what address, what to write at what address to stop and start the clock and so on.
+
+Enjoy!
 
   

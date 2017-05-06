@@ -28,7 +28,7 @@
 
 extern "C"
 {
-	#include "./utility/rtc_hal.h"
+	#include "utility/rtc_hal.h"
 	#include <string.h>
 	#include "avr/interrupt.h"
 	#include "avr/io.h"

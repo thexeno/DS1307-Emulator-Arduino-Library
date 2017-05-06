@@ -1,7 +1,7 @@
 # DS1307 Emulator Arduino Library V1.0
 *Licensing information is attached on the header of each file.*
 
-The DS1307 Emulator is, as stated by its name, a mere emulation of the omonym chip. This library lets your Arduino behave like such a chip, without actually having a DS1307 lying around. 
+The DS1307 Emulator is, as stated by its name, a mere emulation of the omonym chip. This library lets your Arduino behave like such a chip, without actually having a DS1307 around. 
 
 ## Compatibility
 Since it is really keeping the time, this library is pre-tuned (and since it is open source can be retuned) to work with a quartz crystal of the system clock, running at 16MHz. For this reason can run on any Arduino that uses an external crystal at 16 MHz. The microcontroller supported is the one from the Atmega family (like Arduino Uno, Leonardo, Nano, Micro, Mini and other Atmega derived at 16MHz crystal, like Arduino PRO).

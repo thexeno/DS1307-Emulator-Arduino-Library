@@ -549,37 +549,7 @@ void DS1307emulator::busConnect()
 	Wire.onRequestDataNack(DS1307emulatorWrapper_OnRequestDataNack);
 }
 
-//void DS1307emulator::initTimeZone(uint8_t pin)
-//{
-//
-	//rtcData.pin = pin;
-	//rtcHal_init(rtcData.pin);
-	//rtcData.second = 0;
-	//rtcData.minute = 0;
-	//rtcData.hour = 1;
-	//rtcData.Wday = 1;
-	//rtcData.Mday = 1;
-	//rtcData.month = 1;
-	//rtcData.year = 0;
-	//rtcData.ptr = 0;
-	//rtcData.halfTick = 0;
-	//memcpy(rtcData.NvRam, nvRamReset, sizeof(rtcData.NvRam));
-	//rtcData.notLeap = leapCalc(rtcData.year);
-	//rtcData.am_Pm = RTC_PROTOCOL_AM_MODE;
-	//rtcData.sqwOutPinFreq = RTC_PROTOCOL_SET_1HZ_MODE;
-	//rtcData.sqwOutPinMode = RTC_PROTOCOL_OUT_SQUAREW_MODE;
-	//rtcData.sqwOutPinValue = RTC_PROTOCOL_OUTVAL_LOW;
-	//rtcData.dataByte = 0; /* first byte rx will be adx */
-	//rtcData.clockHalt = RTC_PROTOCOL_NCH_MODE;
-	//rtcData.hourFormat = RTC_PROTOCOL_MILITARY_FORMAT_MODE;
-	//rtcData.isrSync = 1;
-	//rtcData.lastOperation = RTC_OP_WR;
-	//DS1307emulator::bufferUserData();
-	//DS1307emulator::setUserData();
-	//rtcData.lastOperation = RTC_OP_RD;
-	////rtcData.noSet = 0; // data no more modified by library
-//
-//}
+
 
 void DS1307emulator::softInit(uint8_t pin)
 {
@@ -635,24 +605,7 @@ void DS1307emulator::init(uint8_t pin)
 }
 
  
-// void DS1307emulator::slaveSendHandler(void)
-// {
-// 	DS1307emulator::bufferUserData();
-// 	//while (0 <= Wire.available()) { // loop through all but the last
-//     Wire.write(DS1307emulator::readUserData());
-//   	//}
-//   	//DS1307emulator::setUserData();
-// }
 
-// void DS1307emulator::slaveReceiveHandler(int data)
-// {
-// 	DS1307emulator::bufferUserData();
-// 	for (int i = 0; i < data; i++)
-// 	{
-// 		DS1307emulator::writeToRTC((uint8_t)Wire.read()); // receive byte as a character
-// 	}
-// 	DS1307emulator::setUserData();
-// }
 
 
 /* API Chiamata da ISR timer */

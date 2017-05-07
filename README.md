@@ -8,7 +8,7 @@ Since it is really keeping the time, this library is pre-tuned (and since it is 
 
 It requires to have installed the [HardWire](http://www.arduinolibraries.info/libraries/hard-wire) library.
 
-### Resources
+### Library requirements
 When initialized with the I2C bus usage, this library occupy the:
  - Timer1
  - I2C bus/pins

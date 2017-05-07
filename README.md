@@ -10,11 +10,11 @@ It requires to have installed the [HardWire](http://www.arduinolibraries.info/li
 
 ### Library requirements
 When initialized with the I2C bus usage, this library occupy the:
- - Timer1
- - I2C bus/pins
- - RTC pin
- - At least 4.1 kB of flash
- - At least 610 Bytes of RAM
+ - Timer1 (no PWM output on Arduino pins 9 and 10)
+ - If needed: I2C bus/pins
+ - If needed: RTC output pin
+ - At least 4.1 kB of flash available from the sketch
+ - At least 610 Bytes of RAM available from the sketch
  
 Disconnecting the RTC logic from the bus, allow to free up the I2C resoources, like SDA and SCL pins, or use the I2C bus for other purposes or role in the bus (i.e. like using the Arduino running the emulator as I2C master for other purposes). It can subsequently reconnected to the RTC logic (see *Initialization* below).
 

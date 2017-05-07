@@ -13,7 +13,8 @@ When initialized with the I2C bus usage, this library occupy the:
  - Timer1
  - I2C bus/pins
  - RTC pin
- - Any possible resource used by the Wire library, since it is used to communicate through the I2C bus
+ - At least 4.1 kB of flash
+ - At least 610 Bytes of RAM
  
 Disconnecting the RTC logic from the bus, allow to free up the I2C resoources, like SDA and SCL pins, or use the I2C bus for other purposes or role in the bus (i.e. like using the Arduino running the emulator as I2C master for other purposes). It can subsequently reconnected to the RTC logic (see *Initialization* below).
 

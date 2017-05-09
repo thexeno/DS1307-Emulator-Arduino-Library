@@ -44,7 +44,7 @@ Function to used in sequence to *write to the emulator* using the sketch:
 
   1. **DS1307Emulator.bufferUserData()** -> save the current time to a temporary buffer to avoid time wrapping issues (as the DS1307 chip does).
   2. **DS1307Emulator.writeToRTC(*address*)** -> write the current *address* data. In this step, is the RTC internal address set to address value. 
-  3. Issuing again the step 2 will write RTC data from the previously set address - it will auto-increment the internal address from the one set in step 2. Repeat for as many bytes shall be written.
+  3. Issuing again the step 2 will now write RTC *data* from the previously set *address* - it will auto-increment the internal address from the one set in step 2. Repeat for as many bytes shall be written.
   4. **DS1307Emulator.setUserData()** -> apply the adjusted configuration to the RTC registers and close the writing sequence.
  
 Function to used in sequence to *read from the emulator* using the sketch:
